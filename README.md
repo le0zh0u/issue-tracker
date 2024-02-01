@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a demo project for practicing Next.js, Prisma, Tailwind CSS.
+
+Learning from Youtube video: https://www.youtube.com/watch?v=J9sfR6HN6BY
 
 ## Getting Started
 
@@ -16,21 +18,53 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Something to learn
+ 
+### use `rafce`
+Use `rafce` to create React page export module quickly.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### react-icons
+Use icons from `react-icons `
 
-## Learn More
+### classnames
+combine classname with conditions.
 
-To learn more about Next.js, take a look at the following resources:
+example:
+``` tsx
+className={classnames({'text-black-900':isCurrentPage, 'text-black-500':!isCurrentPage, 'hover:text-blue-800': true})}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In the code, text is a link in nav. If the text is matched current page path, it will display as `black-900`, othewise it will display as `black-500`. if pointer is hovering the text, it will display as `black-800`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### color transition
+Use `className = 'transition-colors'`, can let color change smoothly.
 
-## Deploy on Vercel
+### prisma
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### init prisma
+`npx prisma init`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### form prisma schema
+`npx prisma format`
+
+It will format file named `schema.prisma`.
+
+#### migrate
+`npx prisma migrate dev`
+
+- create `migrations` folder
+- generate migrate sql
+- create table in DB
+
+### Radix-UI
+UI components base with Tailwind CSS
+
+### Markdown Editor
+`react-simplemde-editor`
+
+### Form Validation
+
+`react-hook-form`
+
+`zod`
+
